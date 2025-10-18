@@ -6,7 +6,7 @@ import { Feed } from "./assets/pages/feed";
 
 function App() {
    return (
-    <Router>
+    <Router basename="/primeiro-spa-react">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
