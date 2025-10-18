@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/primeiro-spa-react/static/js/main.db558834.js",
+    "main.js": "/primeiro-spa-react/static/js/main.7ee04269.js",
     "static/media/banner3.png": "/primeiro-spa-react/static/media/banner3.bb9a7d1414f5fbe4c98e.png",
     "static/media/banner2.png": "/primeiro-spa-react/static/media/banner2.af0aac9f644f6236119b.png",
     "static/media/banner4.png": "/primeiro-spa-react/static/media/banner4.1d27207cd749506dc739.png",
     "static/media/bg.png": "/primeiro-spa-react/static/media/bg.72ac04c9640572343efd.png",
     "index.html": "/primeiro-spa-react/index.html",
-    "main.db558834.js.map": "/primeiro-spa-react/static/js/main.db558834.js.map"
+    "main.7ee04269.js.map": "/primeiro-spa-react/static/js/main.7ee04269.js.map"
   },
   "entrypoints": [
-    "static/js/main.db558834.js"
+    "static/js/main.7ee04269.js"
   ]
 }
