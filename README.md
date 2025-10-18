@@ -1,9 +1,11 @@
-# Getting Started with Create React App
+# SPA com CRA
 
+ ## Load da pagina
 
-## Available Scripts
+    Devido a configurações do próprio GitHub Pages o react-router tem um problema para trocar a tela de exibição.
+    No caso desse site ao apertar em Entrar no Login é direcionado para uma página 404,
+    pois a URL gerada é "/feed?" o que gera um erro, basta retornar a página que a url é corrigida.
 
-In the project directory, you can run:
 
 ### `npm start`
 
