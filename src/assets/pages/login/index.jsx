@@ -1,5 +1,8 @@
-import { MdEmail, MdLock} from 'react-icons/md'
-import { useNavigate } from 'react-router'
+import { MdEmail, MdLock } from "react-icons/md";
+import { useNavigate } from "react-router";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 
 import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
@@ -23,12 +26,48 @@ import {
   TitleHightlight,
 } from "./styles";
 
-const Login = () => {
+import { api } from "../../../services/api";
 
+const Login = () => {
   const navigate = useNavigate();
 
-  const handleClickSignIn = () => {
-    navigate("/feed");
+  const schema = yup
+    .object({
+      email: yup
+        .string()
+        .email("Email não é válido")
+        .required("Preencha o email e envie"),
+      password: yup
+        .string()
+        .min(3, "No mínimo 3 caracteres")
+        .required("Preencha o senha e envie"),
+    })
+    .required();
+
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+    mode: "onChange",
+  });
+
+  const onSubmit = async (formData) => {
+    try {
+      const { data } = await api.get(
+        `users?email=${formData.email}&senha=${formData.password}`
+      );
+      console.log('retorno api', data)
+      if (data.length === 1) {
+        navigate("/feed");
+      } else {
+        alert(`          EMAIL: jose@gmail.com
+          SENHA: 123456`);
+      }
+    } catch {
+      alert("Lembre de rodar o db.json no console... 'npm run api'");
+    }
   };
 
   return (
@@ -60,10 +99,28 @@ const Login = () => {
         <Wrapper>
           <TitleLogin>Faça seu cadastro</TitleLogin>
           <SubtitleLogin>Entre e faça a mudança.</SubtitleLogin>
-          <form>
-            <Input placeholder="Email" leftIcon={<MdEmail />}/>
-            <Input placeholder="Senha" type="password" leftIcon={<MdLock />} />
-            <Button title="Entrar" variant="secondary" size={30} onClick={handleClickSignIn} type="Button"/>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <Input
+              name={"email"}
+              control={control}
+              errorMessage={errors?.email?.message}
+              placeholder="Email"
+              leftIcon={<MdEmail />}
+            />
+            <Input
+              name={"password"}
+              control={control}
+              errorMessage={errors?.password?.message}
+              placeholder="Senha"
+              type="password"
+              leftIcon={<MdLock />}
+            />
+            <Button
+              title="Entrar"
+              variant="secondary"
+              size={30}
+              type="submit"
+            />
           </form>
           <Row>
             <ForgetText>Esqueci minha senha</ForgetText>

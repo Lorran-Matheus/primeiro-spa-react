@@ -60,7 +60,7 @@ export const BuscarInputContainer = styled.div`
   }
 `;
 
-export const Menu = styled.a`
+export const Menu = styled.div`
   max-width: 100%;
   font-size: .75rem
   line-height: 1.5rem;
@@ -84,7 +84,7 @@ export const Menu = styled.a`
     `}
 `;
 
-export const MenuRight = styled.a`
+export const MenuRight = styled.div`
 .hok{
   font-family: 'Roboto', 'Arial';
   font-size: .75rem

@@ -22,7 +22,6 @@ export const InputText = styled.input`
   width: 100%;
   border: 0;
   height: 30px;
-  
 
   &:focus,
   &:hover {
@@ -30,4 +29,11 @@ export const InputText = styled.input`
     background-color: #3b3450;
     border-radius: 0.2rem;
   }
+`;
+
+export const ErrorText = styled.p`
+  color: #ff0000;
+  font-family: 'Arial';
+  font-size: 12px;
+  margin-bottom: 5px;
 `;

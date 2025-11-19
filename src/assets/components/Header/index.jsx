@@ -54,7 +54,7 @@ const Header = ({ autenticado, variant = "primary" }) => {
                     Login
                   </Link>
                 </MenuRight>
-                <Button variant title="Entrar" size={10}></Button>
+                <Button variant="secondary" title="Entrar" size={10}></Button>
                 <Button title="Cadastrar"></Button>
               </>
             )}
