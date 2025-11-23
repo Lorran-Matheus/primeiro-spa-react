@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 import logo from "../../img/logo.png";
 import { Button } from "../Button";
@@ -15,6 +15,14 @@ import {
 } from "./styles";
 
 const Header = ({ autenticado, variant = "primary" }) => {
+  const navigate = useNavigate();
+  const handleClickSignIn = () => {
+    navigate("/login");
+  };
+
+  const handleClickRegister = () => {
+    navigate("/register");
+  }
   return (
     <>
       <Wrapper>
@@ -54,8 +62,13 @@ const Header = ({ autenticado, variant = "primary" }) => {
                     Login
                   </Link>
                 </MenuRight>
-                <Button variant="secondary" title="Entrar" size={10}></Button>
-                <Button title="Cadastrar"></Button>
+                <Button
+                  variant="secondary"
+                  title="Entrar"
+                  size={10}
+                  onClick={handleClickSignIn}
+                ></Button>
+                <Button title="Cadastrar" onClick={handleClickRegister}></Button>
               </>
             )}
           </Row>
