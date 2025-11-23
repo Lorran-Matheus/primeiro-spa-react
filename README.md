@@ -7,7 +7,7 @@
     uma página 404, pois a URL gerada é "/feed?" o que gera um erro, basta retornar a página
     que a url é corrigida.
 
-- Lembre de rodar ```npm run api``` no console para usar email e senha válidos
+- Rode ```npm run api``` no console para usar email e senha válidos
 
 
 ## Available Scripts
