@@ -1,4 +1,4 @@
-import { MdEmail, MdLock } from "react-icons/md";
+// import { MdEmail, MdLock } from "react-icons/md";
 import { useNavigate } from "react-router";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -27,6 +27,7 @@ import {
 } from "./styles";
 
 import { api } from "../../../services/api";
+import { IFormData } from "./types";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -53,7 +54,7 @@ const Login = () => {
     mode: "onChange",
   });
 
-  const onSubmit = async (formData) => {
+  const onSubmit = async (formData: IFormData) => {
     try {
       const { data } = await api.get(
         `users?email=${formData.email}&senha=${formData.password}`
@@ -105,7 +106,7 @@ const Login = () => {
               control={control}
               errorMessage={errors?.email?.message}
               placeholder="Email"
-              leftIcon={<MdEmail />}
+              // leftIcon={<MdEmail />}
             />
             <Input
               name={"password"}
@@ -113,7 +114,7 @@ const Login = () => {
               errorMessage={errors?.password?.message}
               placeholder="Senha"
               type="password"
-              leftIcon={<MdLock />}
+              // leftIcon={<MdLock />}
             />
             <Button
               title="Entrar"

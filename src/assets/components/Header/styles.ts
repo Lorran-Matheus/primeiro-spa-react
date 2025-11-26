@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { HeaderMenu, HeaderMenuRight } from "./types";
 
 export const Container = styled.div`
   width: 100%;
@@ -60,7 +61,7 @@ export const BuscarInputContainer = styled.div`
   }
 `;
 
-export const Menu = styled.div`
+export const Menu = styled.div<HeaderMenu>`
   max-width: 100%;
   font-size: .75rem
   line-height: 1.5rem;
@@ -84,7 +85,7 @@ export const Menu = styled.div`
     `}
 `;
 
-export const MenuRight = styled.div`
+export const MenuRight = styled.div<HeaderMenuRight>`
 .hok{
   font-family: 'Roboto', 'Arial';
   font-size: .75rem

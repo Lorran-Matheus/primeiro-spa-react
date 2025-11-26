@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
+import { ButtonStyled } from "./types";
 
-export const ButtonContainer = styled.button`
+export const ButtonContainer = styled.button<ButtonStyled>`
   color: #ffff;
   padding: 2px 12px;
   max-width: 100%;

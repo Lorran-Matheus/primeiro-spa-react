@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router";
+import { IHeader } from "./types";
 
 import logo from "../../img/logo.png";
 import { Button } from "../Button";
@@ -14,7 +15,7 @@ import {
   UserPicture,
 } from "./styles";
 
-const Header = ({ autenticado, variant = "primary" }) => {
+const Header = ({ autenticado, variant = "primary" }: IHeader) => {
   const navigate = useNavigate();
   const handleClickSignIn = () => {
     navigate("/login");

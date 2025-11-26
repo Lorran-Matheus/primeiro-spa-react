@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { UserProgress } from "./types";
 
 export const Container = styled.div`
   width: 100%;
@@ -32,7 +33,7 @@ export const NameText = styled.div`
   color: #ffffff;
 `;
 
-export const Progress = styled.div`
+export const Progress = styled.div<UserProgress>`
   width: 11.25rem;
   max-width: 100%;
   height: 6px;

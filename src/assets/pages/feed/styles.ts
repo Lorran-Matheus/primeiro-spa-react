@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FeedStyled } from "./types";
 
 export const Container = styled.main`
   width: 100vw;
@@ -37,7 +38,7 @@ export const TitleHightlight = styled.h3`
   margin-bottom: 24px;
 `;
 
-export const Column = styled.div`
+export const Column = styled.div<FeedStyled>`
   flex: ${({ flex }) => flex};
   padding-right: 24px;
 `;

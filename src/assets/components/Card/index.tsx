@@ -1,5 +1,6 @@
 import React from "react";
-import { FiThumbsUp } from "react-icons/fi";
+// import { FiThumbsUp } from "react-icons/fi";
+import { ICard } from "./types";
 
 import {
   CardContainer,
@@ -11,7 +12,7 @@ import {
   UserPicture,
 } from "./styles";
 
-const Card = ({post, perfil, name, time, title, description, hashs, like}) => {
+const Card = ({post, perfil, name, time, title, description, hashs, like}: ICard) => {
   return (
     <>
       <CardContainer>
@@ -27,7 +28,7 @@ const Card = ({post, perfil, name, time, title, description, hashs, like}) => {
           <PostInfo>
             <h4>{title}</h4>
             <p>
-              {description}... <a href="#">Saiba Mais</a>
+              {description}... <a href="'">Saiba Mais</a>
             </p>
           </PostInfo>
           <HasInfo>
@@ -35,7 +36,7 @@ const Card = ({post, perfil, name, time, title, description, hashs, like}) => {
               {hashs}
             </h4>
             <p>
-              <FiThumbsUp /> {like}
+              {/* <FiThumbsUp /> {like} */}
             </p>
           </HasInfo>
         </Content>

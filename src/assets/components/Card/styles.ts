@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { CardStyled } from "./types";
 
 export const CardContainer = styled.div`
   width: 80%;
@@ -14,7 +15,7 @@ export const CardContainer = styled.div`
   gap: .6rem;
   `;
 
-export const ImageBackground = styled.img`
+export const ImageBackground = styled.img<CardStyled>`
   width: 100%;
   height: 13rem;
 `;
@@ -52,7 +53,7 @@ export const UserInfo = styled.div`
   }
 `;
 
-export const UserPicture = styled.img`
+export const UserPicture = styled.img<CardStyled>`
   width: 3rem;
   height: 3rem;
   aspect-ratio: 1/1;

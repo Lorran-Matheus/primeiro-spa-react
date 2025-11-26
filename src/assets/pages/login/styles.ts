@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { LoginStyled } from "./types";
 
 export const Container = styled.main`
   width: 100%;
@@ -68,7 +69,7 @@ export const Row = styled.div`
   align-items: center;
 `;
 
-export const Title = styled.h2`
+export const Title = styled.h2<LoginStyled>`
   font-family: "Arial", "Roboto";
   font-weight: 700;
   font-size: 1.8rem;

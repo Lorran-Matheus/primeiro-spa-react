@@ -1,5 +1,5 @@
-import { MdEmail, MdLock } from "react-icons/md";
-import { IoPerson } from "react-icons/io5";
+// import { MdEmail, MdLock } from "react-icons/md";
+// import { IoPerson } from "react-icons/io5";
 import { Link } from "react-router";
 import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
@@ -32,12 +32,18 @@ const Register = () => {
           <form action="push">
             <Input
               name={"text"}
-              leftIcon={<IoPerson />}
+              // leftIcon={<IoPerson />}
               control={control}
               placeholder="Nome completo"
             />
-            <Input name={"email"} leftIcon={<MdEmail />} control={control} placeholder="E-mail" />
-            <Input name={"password"} leftIcon={<MdLock />} control={control} placeholder="Senha" />
+            <Input name={"email"}
+              // leftIcon={<MdEmail />}
+              control={control}
+              placeholder="E-mail" />
+            <Input name={"password"} 
+            // leftIcon={<MdLock />} 
+            control={control} 
+            placeholder="Senha" />
           </form>
           <div className="button-container">
             <Button title="Criar minha conta" variant="Secondary" />
@@ -53,9 +59,9 @@ const Register = () => {
             </div>
 
             <p>
-              Já tenho conta. 
+              Já tenho conta.
               <Link className="hok" to="/login">
-                 Fazer Login
+                Fazer Login
               </Link>
             </p>
           </div>
